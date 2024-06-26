@@ -12,7 +12,7 @@ export default component$(() => {
         <br /><span class="highlight">Hosting </span>Services
       </h1>
         <StringSwitcher />
-      <p>A 24/7 Freemium Hosting!</p>
+      <p>24/7 Freemium Hosting!</p>
       <div class={herostyles["button-group"]}>
         {/*Plans Button*/}
         <Link href="/#plans" class="button">
