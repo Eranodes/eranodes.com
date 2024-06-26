@@ -1,0 +1,53 @@
+.wrapper {
+  padding: 10px;
+  display: flex;
+  width: max-content;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text {
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.stringswitcher {
+  padding: 5px;
+  align-items: left !important;
+  color: #fff;
+  overflow: hidden;
+  border-right: .15em solid transparent;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .1em;
+  animation:
+    typing 5s steps(30, end),
+    blink-caret 1s step-end infinite,
+    typing 5s 5s steps(30, end) infinite,
+    hide-caret 5s 5s steps(1, end);
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: lightblue }
+}
+
+/* The animation to hide the cursor */
+@keyframes hide-caret {
+  0% {
+    border-right: .15em solid transparent;
+  }
+  100% {
+    border-right: none;
+  }
+}

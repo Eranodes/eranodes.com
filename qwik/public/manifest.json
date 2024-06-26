@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "EraNodes",
+  "short_name": "EraNodes 24x7",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#911a33",
+  "description": "EraNodes Freemium 24x7 Hosting"
+}

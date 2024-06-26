@@ -1,0 +1,86 @@
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8a8a8a;
+    margin: 50px auto 0;
+    padding: 0;
+    text-align: center;
+}
+
+.wrapper {
+    margin: 20px auto 15px;
+    padding: 0 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: rgba(155, 154, 154, 0.286);
+    backdrop-filter: blur(100px);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    flex: 1 1 calc(30% - 50px);
+    max-width: calc(30% - 50px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.author {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.location {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    color: #56d620;
+}
+
+.date {
+    font-size: 0.8em;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.rating {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #ffbb00;
+}
+
+.content {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+.trustpilotButton {
+    margin-top: 15px;
+    background-color: #04da8d;
+}

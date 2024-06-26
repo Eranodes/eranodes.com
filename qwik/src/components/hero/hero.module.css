@@ -1,0 +1,47 @@
+.hero {
+  display: flex;
+  vertical-align: middle;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    height: fit-content;
+    margin-top: 100px;
+  }
+}
+
+.hero p {
+  color: white;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.plansbutton {
+  background-color: var(--qwik-dark-blue);
+}
+.string-container {
+  width: 100%;
+  display: inline;
+  align-items: center;
+  align-content: center;
+}
