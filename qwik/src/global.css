@@ -23,6 +23,8 @@ html {
   -o-tab-size: 4;
   tab-size: 4;
   font-family: 'Red Hat', sans-serif;
+  -ms-overflow-style: none; /*Hides scrollbar on Edge */
+  scrollbar-width: none; /*Hides scrollbar on Firefox */
 }
 
 body {
@@ -31,3 +33,8 @@ body {
   line-height: inherit;
   font-family: 'Red Hat', sans-serif;
 }
+::-webkit-scrollbar { /*removes scrollbar on Chrome. Safari and Opera */
+  display: none;
+}
+
+
