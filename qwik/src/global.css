@@ -34,7 +34,7 @@ body {
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
   border-radius: 50px;
 }
 
