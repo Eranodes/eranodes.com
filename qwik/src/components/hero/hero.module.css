@@ -35,6 +35,10 @@
   }
 }
 
+.button {
+  padding: 15px !important;
+}
+
 .button.gameHostingButton {
   background-color: #2881a7;
 }

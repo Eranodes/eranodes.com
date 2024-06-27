@@ -1,3 +1,7 @@
+.container {
+
+}
+
 .heading {
     font-size: 24px;
     font-weight: bold;
@@ -81,6 +85,6 @@
 }
 
 .trustpilotButton {
-    margin-top: 15px;
+    margin-top: 35px;
     background-color: #04da8d;
 }
