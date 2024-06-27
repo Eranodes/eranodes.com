@@ -1,5 +1,6 @@
 import fetch from 'node-fetch';
 import dotenv from 'dotenv';
+import fs from 'fs';
 
 dotenv.config();
 
@@ -9,7 +10,7 @@ const nodesApiUrl = 'https://panel.eranodes.com/api/application/nodes';
 const discordBotToken = process.env.DISCORD_BOT_TOKEN;
 const discordGuildId = process.env.DISCORD_GUILD_ID;
 
-async function fetchServerData() {
+async function fetchserverCount() {
   try {
     const response = await fetch(apiUrl, {
       headers: {
@@ -24,13 +25,14 @@ async function fetchServerData() {
 
     const data = await response.json();
     const numberOfServers = data.meta.pagination.total;
-    console.log(`Number of servers running: ${numberOfServers}`);
+    return numberOfServers;
   } catch (error) {
     console.error('Error fetching server information:', error);
+    throw error; // Re-throw the error to handle it where fetchserverCount is called
   }
 }
 
-async function fetchNodeData() {
+async function fetchtotalRam() {
   try {
     const response = await fetch(nodesApiUrl, {
       headers: {
@@ -52,9 +54,10 @@ async function fetchNodeData() {
     });
 
     const totalAllocatedRamGB = totalAllocatedRamMB / 1024;
-    console.log(`Total allocated RAM across all nodes: ${totalAllocatedRamGB.toFixed(2)} GB`);
+    return totalAllocatedRamGB.toFixed(2);
   } catch (error) {
     console.error('Error fetching node information:', error);
+    throw error; // Re-throw the error to handle it where fetchtotalRam is called
   }
 }
 
@@ -74,12 +77,36 @@ async function fetchDiscordMemberCount() {
 
     const data = await response.json();
     const memberCount = data.approximate_member_count || data.member_count; // use member_count as a fallback
-    console.log(`Number of members in the Discord server: ${memberCount}`);
+    return memberCount;
   } catch (error) {
     console.error('Error fetching Discord server information:', error);
+    throw error; // Re-throw the error to handle it where fetchDiscordMemberCount is called
   }
 }
 
-fetchServerData();
-fetchNodeData();
-fetchDiscordMemberCount();
+async function fetchDataAndSave() {
+  try {
+    const serverCount = await fetchserverCount();
+    const totalRam = await fetchtotalRam();
+    const discordMemberCount = await fetchDiscordMemberCount();
+
+    const jsonData = {
+      timestamp: new Date().toISOString(),
+      serverCount,
+      totalRam,
+      discordMemberCount
+    };
+
+    const filename = 'data.json';
+    fs.writeFileSync(filename, JSON.stringify(jsonData, null, 2));
+    console.log(`Data saved to ${filename}`);
+  } catch (error) {
+    console.error('Error fetching and saving data:', error);
+  }
+}
+
+// Initial fetch and save
+fetchDataAndSave();
+
+// Schedule to fetch and save data every 10 minutes (600000 milliseconds)
+setInterval(fetchDataAndSave, 600000);
