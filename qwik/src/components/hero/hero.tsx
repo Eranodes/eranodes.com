@@ -6,44 +6,46 @@ import { StringSwitcher } from "../typewriter/typewriter";
 
 export default component$(() => {
   return (
-    <div class={[herostyles.hero]}>
-      <h1>
-        <span class="highlight">Welcome </span> to <span class="highlight">EraNodes </span>
-        <br /><span class="highlight">Hosting </span>Services
-      </h1>
-        <StringSwitcher />
-      <p>24/7 Freemium Hosting!</p>
-      <div class={herostyles["button-group"]}>
-        
-        {/*Game Hosting Button*/}
-        <a href="/game-hosting" class="button">
-          <BsHddNetwork/>  Game Hosting
-        </a>
+    <div class="container container-center">
+      <div class={[herostyles.hero]}>
+        <h1>
+          <span class="highlight">Welcome </span> to <span class="highlight">EraNodes </span>
+          <br /><span class="highlight">Hosting </span>Services
+        </h1>
+          <StringSwitcher />
+        <p>24/7 Freemium Hosting!</p>
+        <div class={herostyles["button-group"]}>
 
-        {/*Server Hosting Button*/}
-        <a href="/server-hosting" class="button">
-          <BsServer/>  Server Hosting
-        </a>
+          {/*Game Hosting Button*/}
+          <a href="/game-hosting" class={`${herostyles.button} ${herostyles.gameHostingButton} button`}>
+            <BsHddNetwork/>  Game Hosting
+          </a>
 
-        {/*Discord Button*/}
-        <a
-          href="https://discord.gg/eranodes"
-          target="_blank"
-          class="button button-discord"
-        >
-          <BsDiscord/>  Join the community on discord!
-        </a>
+          {/*Server Hosting Button*/}
+          <a href="/server-hosting" class={`${herostyles.button} ${herostyles.serverHostingButton} button`}>
+            <BsServer/>  Server Hosting
+          </a>
 
-        {/*Reviews Button*/}
-        <Link href="/#reviews" class="button">
-          <BsStarFill/>  Reviews
-        </Link>
+          {/*Discord Button*/}
+          <a
+            href="https://discord.gg/eranodes"
+            target="_blank"
+            class={`${herostyles.button} ${herostyles.discordButton} button button-discord`}
+          >
+            <BsDiscord/>  Discord
+          </a>
 
-        {/*Development Services Button*/}
-        <a href="/development-services" class="button">
-          <BsPersonWorkspace/>  Development Services
-        </a>
+          {/*Reviews Button*/}
+          <Link href="/#reviews" class={`${herostyles.button} ${herostyles.reviewsButton} button`}>
+            <BsStarFill/>  Reviews
+          </Link>
 
+          {/*Development Services Button*/}
+          <a href="/development-services" class={`${herostyles.button} ${herostyles.developmentServicesButton} button`}>
+            <BsPersonWorkspace/>  Development Services
+          </a>
+
+        </div>
       </div>
     </div>
   );
