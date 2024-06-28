@@ -47,10 +47,6 @@ li {
   margin-left: 20px;
 }
 
-li:first-child {
-  margin-left: 0;
-}
-
 a {
   text-decoration: none;
   font-weight: bold;
