@@ -4,17 +4,17 @@ import fs from 'fs';
 
 dotenv.config();
 
-const apiKey = process.env.API_KEY;
+const pterodactylApiKey = process.env.PTERODACTYL_API_KEY;
 const apiUrl = 'https://panel.eranodes.com/api/application/servers';
 const nodesApiUrl = 'https://panel.eranodes.com/api/application/nodes';
 const discordBotToken = process.env.DISCORD_BOT_TOKEN;
 const discordGuildId = process.env.DISCORD_GUILD_ID;
 
-async function fetchserverCount() {
+async function fetchpterodactylServerCount() {
   try {
     const response = await fetch(apiUrl, {
       headers: {
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${pterodactylApiKey}`,
         'Content-Type': 'application/json'
       }
     });
@@ -28,15 +28,15 @@ async function fetchserverCount() {
     return numberOfServers;
   } catch (error) {
     console.error('Error fetching server information:', error);
-    throw error; // Re-throw the error to handle it where fetchserverCount is called
+    throw error; // Re-throw the error to handle it where fetchpterodactylServerCount is called
   }
 }
 
-async function fetchtotalRam() {
+async function fetchpterodactylTotalRam() {
   try {
     const response = await fetch(nodesApiUrl, {
       headers: {
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${pterodactylApiKey}`,
         'Content-Type': 'application/json'
       }
     });
@@ -57,7 +57,7 @@ async function fetchtotalRam() {
     return totalAllocatedRamGB.toFixed(2);
   } catch (error) {
     console.error('Error fetching node information:', error);
-    throw error; // Re-throw the error to handle it where fetchtotalRam is called
+    throw error; // Re-throw the error to handle it where fetchpterodactylTotalRam is called
   }
 }
 
@@ -86,14 +86,14 @@ async function fetchDiscordMemberCount() {
 
 async function fetchDataAndSave() {
   try {
-    const serverCount = await fetchserverCount();
-    const totalRam = await fetchtotalRam();
+    const pterodactylServerCount = await fetchpterodactylServerCount();
+    const pterodactylTotalRam = await fetchpterodactylTotalRam();
     const discordMemberCount = await fetchDiscordMemberCount();
 
     const jsonData = {
       timestamp: new Date().toISOString(),
-      serverCount,
-      totalRam,
+      pterodactylServerCount,
+      pterodactylTotalRam,
       discordMemberCount
     };
 
