@@ -1,6 +1,7 @@
 import { component$, Slot, useStyles$ } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
+import { useServerStats } from '../components/statistics/statistics';
 
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
@@ -36,3 +37,5 @@ export default component$(() => {
     </>
   );
 });
+
+export { useServerStats };

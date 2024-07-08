@@ -1,5 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+
+import Statistics from '../components/statistics/statistics';
 import Hero from "../components/hero/hero";
 import Plans from "../components/plans/plans";
 import Testimonials from "../components/testimonials/testimonials";
@@ -9,6 +11,7 @@ export default component$(() => {
   return (
     <>
       <Hero />
+      <Statistics />
       <div id="plans" class="container"></div>
       <Plans />
       <div role="presentation" class="ellipsis"></div>
@@ -30,3 +33,4 @@ export const head: DocumentHead = {
     },
   ],
 };
+
