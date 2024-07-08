@@ -1,0 +1,20 @@
+{
+    "name": "EraNodes Landing Page",
+    "host": "",
+    "protocol": "sftp",
+    "port": 22,
+    "username": "",
+    "password": "",
+    "remotePath": "/",
+    "ignore": [
+        ".vscode",
+        ".git",
+        ".DS_Store",
+        "qwik",
+        "api/node_modules",
+        "node_modules"
+    ],
+    "uploadOnSave": false,
+    "useTempFile": false,
+    "openSsh": false
+}
