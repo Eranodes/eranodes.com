@@ -7,7 +7,6 @@
   height: 100vh;
   justify-content: center;
   gap: 40px;
-  margin-top: 50px;
 }
 
 @media screen and (max-width: 768px) {
@@ -36,9 +35,30 @@
   }
 }
 
-.plansbutton {
-  background-color: var(--qwik-dark-blue);
+.button {
+  padding: 15px 30px !important;
 }
+
+.button.gameHostingButton {
+  background-color: #2881a7;
+}
+
+.button.serverHostingButton {
+  background-color: #7830af;
+}
+
+.button.discordButton {
+  background-color: #7289da;
+}
+
+.button.reviewsButton {
+  background-color: #04da8d;
+}
+
+.button.developmentServicesButton {
+  background-color: #17a2b8;
+}
+
 .string-container {
   width: 100%;
   display: inline;

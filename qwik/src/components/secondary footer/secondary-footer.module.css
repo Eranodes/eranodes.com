@@ -11,7 +11,8 @@ a {
 }
 
 .column {
-  flex: 1;
+
+  flex-direction: column;
   width: 100%;
   max-width: 15%;
   margin-left: 20px;
@@ -31,6 +32,8 @@ a {
 }
 
 .columnlinks {
+  display: flex;
+  flex-direction: column;
   margin-top: 5px;
   list-style-type: none;
   padding: 0;

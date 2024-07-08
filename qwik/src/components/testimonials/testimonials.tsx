@@ -53,7 +53,7 @@ export default component$(() => {
   });
 
   return (
-    <div>
+    <div class={`${'container container-center'} ${testimonialStyles.container} button`}>
       <p class={testimonialStyles.heading}>Testimonials</p>
       <div class={[testimonialStyles.wrapper].join(" ")}>
         <div class={testimonialStyles.testimonials}>

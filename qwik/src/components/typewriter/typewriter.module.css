@@ -22,11 +22,9 @@
   border-right: .15em solid transparent;
   white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: .1em;
   animation:
-    typing 5s steps(30, end),
+    typing 5s steps(60, end) infinite ,
     blink-caret 1s step-end infinite,
-    typing 5s 5s steps(30, end) infinite,
     hide-caret 5s 5s steps(1, end);
 }
 
