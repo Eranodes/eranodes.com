@@ -1,6 +1,7 @@
 import fetch from 'node-fetch';
 import dotenv from 'dotenv';
 import fs from 'fs';
+import http from 'http';
 
 dotenv.config();
 
@@ -9,6 +10,7 @@ const apiUrl = 'https://panel.eranodes.com/api/application/servers';
 const nodesApiUrl = 'https://panel.eranodes.com/api/application/nodes';
 const discordBotToken = process.env.DISCORD_BOT_TOKEN;
 const discordGuildId = process.env.DISCORD_GUILD_ID;
+const serverPort = process.env.SERVER_PORT || 3000;
 
 async function fetchpterodactylServerCount() {
   try {
@@ -28,7 +30,7 @@ async function fetchpterodactylServerCount() {
     return numberOfServers;
   } catch (error) {
     console.error('Error fetching server information:', error);
-    throw error; // Re-throw the error to handle it where fetchpterodactylServerCount is called
+    throw error;
   }
 }
 
@@ -57,7 +59,7 @@ async function fetchpterodactylTotalRam() {
     return totalAllocatedRamGB.toFixed(2);
   } catch (error) {
     console.error('Error fetching node information:', error);
-    throw error; // Re-throw the error to handle it where fetchpterodactylTotalRam is called
+    throw error;
   }
 }
 
@@ -76,15 +78,15 @@ async function fetchDiscordMemberCount() {
     }
 
     const data = await response.json();
-    const memberCount = data.approximate_member_count || data.member_count; // use member_count as a fallback
+    const memberCount = data.approximate_member_count || data.member_count;
     return memberCount;
   } catch (error) {
     console.error('Error fetching Discord server information:', error);
-    throw error; // Re-throw the error to handle it where fetchDiscordMemberCount is called
+    throw error;
   }
 }
 
-async function fetchDataAndSave() {
+async function fetchData() {
   try {
     const pterodactylServerCount = await fetchpterodactylServerCount();
     const pterodactylTotalRam = await fetchpterodactylTotalRam();
@@ -97,6 +99,16 @@ async function fetchDataAndSave() {
       discordMemberCount
     };
 
+    return jsonData;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    throw error;
+  }
+}
+
+async function fetchDataAndSave() {
+  try {
+    const jsonData = await fetchData();
     const filename = 'data.json';
     fs.writeFileSync(filename, JSON.stringify(jsonData, null, 2));
     console.log(`Data saved to ${filename}`);
@@ -110,3 +122,22 @@ fetchDataAndSave();
 
 // Schedule to fetch and save data every 10 minutes (600000 milliseconds)
 setInterval(fetchDataAndSave, 600000);
+
+// Create a server to serve the JSON data
+http.createServer(async (req, res) => {
+  if (req.url === '/' && req.method === 'GET') {
+    try {
+      const jsonData = await fetchData();
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify(jsonData, null, 2));
+    } catch (error) {
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Error fetching data' }));
+    }
+  } else {
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    res.end('Not Found');
+  }
+}).listen(serverPort, () => {
+  console.log(`Server is running on port ${serverPort}`);
+});
