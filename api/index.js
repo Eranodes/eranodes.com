@@ -2,8 +2,10 @@ import fetch from 'node-fetch';
 import dotenv from 'dotenv';
 import fs from 'fs';
 import http from 'http';
+import path from 'path';
 
-dotenv.config();
+const __dirname = path.resolve();
+dotenv.config({ path: path.join(__dirname, 'api/.env') });
 
 const pterodactylApiKey = process.env.PTERODACTYL_API_KEY;
 const apiUrl = 'https://panel.eranodes.com/api/application/servers';
@@ -22,7 +24,8 @@ async function fetchpterodactylServerCount() {
     });
 
     if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+      const text = await response.text();
+      throw new Error(`HTTP error! Status: ${response.status}, Body: ${text}`);
     }
 
     const data = await response.json();
@@ -44,7 +47,8 @@ async function fetchpterodactylTotalRam() {
     });
 
     if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+      const text = await response.text();
+      throw new Error(`HTTP error! Status: ${response.status}, Body: ${text}`);
     }
 
     const data = await response.json();
@@ -74,7 +78,8 @@ async function fetchDiscordMemberCount() {
     });
 
     if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+      const text = await response.text();
+      throw new Error(`HTTP error! Status: ${response.status}, Body: ${text}`);
     }
 
     const data = await response.json();
@@ -116,6 +121,9 @@ async function fetchDataAndSave() {
     console.error('Error fetching and saving data:', error);
   }
 }
+
+// Change working directory to 'api' to ensure consistent file paths
+process.chdir(path.join(__dirname, 'api'));
 
 // Initial fetch and save
 fetchDataAndSave();

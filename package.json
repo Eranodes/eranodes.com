@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/Eranodes/eranodes.com/issues"
   },
-  "homepage": "https://github.com/Eranodes/eranodes.com#readme"
+  "homepage": "https://github.com/Eranodes/eranodes.com#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-fetch": "^3.3.2"
+  }
 }
