@@ -42,7 +42,7 @@ h1 {
 }
 h1 .highlight,
 h3 .highlight {
-  color: var(--qwik-light-blue);
+  color: var(--qwik-light-red);
 }
 
 h2 {
@@ -72,7 +72,7 @@ h3 {
 /* TAGS ----------------------------------------- */
 a {
   text-decoration: none;
-  color: var(--qwik-light-blue);
+  color: var(--qwik-light-red);
 }
 
 code {
@@ -142,7 +142,7 @@ ul {
 /* BUTTONS -------------------------------------- */
 a.button,
 button {
-  background: var(--qwik-light-blue);
+  background: var(--qwik-light-red);
   border: none;
   border-radius: 8px;
   color: white;
@@ -152,6 +152,7 @@ button {
   text-align: center;
   position: relative;
   overflow: hidden;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 a.button::after,
@@ -200,7 +201,7 @@ button.button-small {
   height: 400px;
   background: radial-gradient(
     57.58% 57.58% at 48.79% 42.42%,
-    rgba(24, 180, 244, 0.5) 0%,
+    rgb(60, 18, 25) 0%,
     rgba(46, 55, 114, 0) 63.22%
   );
   transform: rotate(5deg);
@@ -228,13 +229,13 @@ button.button-small {
   );
   transform: rotate(-5deg);
 }
-.ellipsis.ellipsis-aqua {
+.ellipsis.ellipsis-red {
   top: 150px;
   left: -100px;
   background: radial-gradient(
     50% 50% at 50% 50%,
-    rgba(63, 227, 227, 0.5) 0%,
-    rgba(21, 25, 52, 0) 100%
+    rgb(148, 29, 51) 0%,
+    rgba(52, 23, 21, 0) 100%
   );
   transform: rotate(-5deg);
 }
