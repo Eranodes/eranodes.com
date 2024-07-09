@@ -2,6 +2,7 @@
     "menuItems": [
       {
         "name": "Hosting",
+        "route": "/plans/hosting",
         "subOptions": [
           { "name": "Website", "route": "/plans/hosting/site" },
           { "name": "AI", "route": "/plans/hosting/ai" },
@@ -13,6 +14,7 @@
       },
       {
         "name": "Development Services",
+        "route": "/plans/dev",
         "subOptions": [
           { "name": "Website", "route": "/plans/dev/website" },
           { "name": "Pterodactyl", "route": "/plans/dev/pterodactyl" }
@@ -20,6 +22,7 @@
       },
       {
         "name": "Build a PC",
+        "route": "/plans/pc-build",
         "subOptions": [
           { "name": "Buy a Premade", "route": "/plans/pc-build/premade" },
           { "name": "Configure your own", "route": "/plans/pc-build/configure" },

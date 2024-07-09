@@ -1,5 +1,5 @@
 import { component$, useSignal, $ } from '@builder.io/qwik';
-import { BsHouse, BsArrowDown } from '@qwikest/icons/bootstrap';
+import { BsHouse } from '@qwikest/icons/bootstrap';
 import navStyles from './nav.module.css';
 import menuData from '../../../data/nav.json';
 
@@ -21,13 +21,14 @@ const Navigation = component$(() => {
       <ul class={navStyles.mainMenu}>
         <li><a href="/" class={navStyles.link}><BsHouse /> Home</a></li>
         {menuItems.map((item, index) => (
-          <li
+          <a
             key={index}
             class={navStyles.menuItem}
             onMouseEnter$={() => handleMouseEnter(index)}
             onMouseLeave$={handleMouseLeave}
+            href={item.route}
           >
-            {item.name} <BsArrowDown />
+            {item.name}
             {hoverIndex.value === index && (
               <ul class={navStyles.subMenu}>
                 {item.subOptions.map((subOption, subIndex) => (
@@ -39,7 +40,7 @@ const Navigation = component$(() => {
                 ))}
               </ul>
             )}
-          </li>
+          </a>
         ))}
       </ul>
     </nav>
