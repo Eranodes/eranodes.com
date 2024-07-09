@@ -1,4 +1,3 @@
-// routes/products/index.tsx
 import { component$ } from '@builder.io/qwik';
 import HostingPlans from "../../../components/plans/hostingplans/hostingplans"
 export default component$(() => {

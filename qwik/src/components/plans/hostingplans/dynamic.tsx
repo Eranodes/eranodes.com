@@ -1,5 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import { BsGeoAltFill, BsMemory, BsCpu, BsNvme, BsPc, BsRouter, BsArchive, BsShieldShaded } from '@qwikest/icons/bootstrap';
+import { useLocation } from '@builder.io/qwik-city';
 import hostingPlans from '../../../data/plans.json';
 import hostingStyles from "../plans.module.css";
 
@@ -22,20 +23,48 @@ const HostingCard = ({ plan }: { plan: any }) => (
 );
 
 export const HostingPlans = component$(() => {
-  return (
-    <div class={hostingStyles.section}>
-      {Object.entries(hostingPlans.hosting_plans).map(([category, plans]) => (
-        <div key={category} class={hostingStyles.category}>
-          <h2>{category.charAt(0) + category.slice(1)} Plans</h2>
-          <div class={hostingStyles.plans}>
-            {plans.map((plan: any) => (
-              <HostingCard key={plan.name} plan={plan} />
-            ))}
+    const loc = useLocation();
+    const lastPathSegment = loc.url.pathname.split('/').filter(segment => segment !== '').pop();
+  
+    let filteredPlans: any[] = [];
+    switch (lastPathSegment && lastPathSegment.toLowerCase()) {
+        case 'website':
+            filteredPlans = hostingPlans.hosting_plans.Website;
+            break;
+        case 'ai':
+            filteredPlans = hostingPlans.hosting_plans.AI;
+            break;
+        case 'vps':
+            filteredPlans = hostingPlans.hosting_plans.VPS;
+            break;
+        case 'vds':
+            filteredPlans = hostingPlans.hosting_plans.VDS;
+            break;
+        case 'game':
+            filteredPlans = hostingPlans.hosting_plans.Game;
+            break;
+        case 'bare-metal':
+            filteredPlans = hostingPlans.hosting_plans['Bare Metal'];
+            break;
+        default:
+            // Default to all plans if no specific category matches
+            filteredPlans = [];
+            break;
+    }
+  
+    return (
+      <div class={hostingStyles.section}>
+        {filteredPlans.length > 0 && (
+          <div>
+            <div class={hostingStyles.plans}>
+              {filteredPlans.map((plan: any) => (
+                <HostingCard key={plan.name} plan={plan} />
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
-  );
-});
-
+        )}
+      </div>
+    );
+  });
+  
 export default HostingPlans;

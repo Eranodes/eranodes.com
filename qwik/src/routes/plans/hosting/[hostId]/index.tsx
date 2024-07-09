@@ -1,6 +1,6 @@
-// routes/products/[productId]/index.tsx
 import { component$ } from '@builder.io/qwik';
 import { useLocation } from '@builder.io/qwik-city';
+import Plans from "../../../../components/plans/hostingplans/dynamic"
 
 export default component$(() => {
   const loc = useLocation();
@@ -8,6 +8,7 @@ export default component$(() => {
     <>
         <div class="container"></div>
         <h1>Hosting plans for {loc.params.hostId}</h1>
+        <Plans/>
     </>
   ) 
 });
