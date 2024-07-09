@@ -100,9 +100,6 @@ ul {
 .container.container-center {
   text-align: center;
 }
-.container.container-flex {
-  /* does nothing on mobile */
-}
 .container.container-spacing-xl {
   padding: 50px 40px;
 }
@@ -121,22 +118,22 @@ ul {
   }
 }
 
-/* SCROLLBAR ------------------------------------ 
+/* SCROLLBAR ------------------------------------ */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.173);
-  border-radius: 4px;
+  background: var(--qwik-dark-red);
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.286);
+  background: var(--qwik-light-red);
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: rgba(255, 255, 255, 0.599);
+  background: var(--qwik-light-red);
 }
 
 /* BUTTONS -------------------------------------- */

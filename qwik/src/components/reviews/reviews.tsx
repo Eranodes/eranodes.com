@@ -1,7 +1,7 @@
-import { component$, $ } from "@builder.io/qwik"; // Import $ from Qwik
-import { BsStarFill } from "@qwikest/icons/bootstrap";
-import testimonialStyles from "./testimonials.module.css";
-import testimonialsData from '../../data/testimonials.json';
+import { component$, $ } from "@builder.io/qwik";
+import { BsStarFill, BsPersonCircle } from "@qwikest/icons/bootstrap";
+import testimonialStyles from "./reviews.module.css";
+import testimonialsData from '../../data/reviews.json';
 
 // Define an interface for the Testimonial object
 interface Testimonial {
@@ -31,7 +31,10 @@ const TestimonialItem = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
     <li class={testimonialStyles.card}>
       <div>
-        <p class={testimonialStyles.author}>{testimonial.author}</p>
+        <div class={testimonialStyles.id}>
+          <BsPersonCircle/>
+          <p class={testimonialStyles.author}>{testimonial.author}</p>
+        </div>
         <p class={testimonialStyles.location}>{testimonial.location}</p>
         <p class={testimonialStyles.date}>{testimonial.date}</p>
         <div class={testimonialStyles.rating}>
@@ -54,7 +57,7 @@ export default component$(() => {
 
   return (
     <div class={`${'container container-center'} ${testimonialStyles.container} button`}>
-      <p class={testimonialStyles.heading}>Testimonials</p>
+      <p class={testimonialStyles.heading}>Reviews</p>
       <div class={[testimonialStyles.wrapper].join(" ")}>
         <div class={testimonialStyles.testimonials}>
           {Testimonials.map((testimonial: Testimonial, index) => (

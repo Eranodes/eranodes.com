@@ -6,10 +6,6 @@
  *
  */
 
- @tailwind base;
- @tailwind components;
- @tailwind utilities;
-
 :root {
   --qwik-dark-blue: #006ce9;
   --qwik-light-blue: #18b6f6;
@@ -38,25 +34,3 @@ body {
   line-height: inherit;
   font-family: 'Red Hat', sans-serif;
 }
-/* width */
-::-webkit-scrollbar {
-  width: 15px;
-  border-radius: 50px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(47, 79, 79);
-  border-radius: 50px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(34, 57, 57);
-}
-
