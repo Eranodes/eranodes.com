@@ -53,10 +53,19 @@
     }
 }
 
+.id {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
+    gap: 10px;
+}
+
 .author {
     font-weight: bold;
     font-size: 1.2em;
-    margin-bottom: 5px;
     color: #fff;
 }
 

@@ -4,7 +4,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-  height: 100vh;
+  height: 70vh;
   justify-content: center;
   gap: 40px;
 }

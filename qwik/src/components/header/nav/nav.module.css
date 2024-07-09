@@ -19,7 +19,7 @@
 }
 
 .menuItem:hover {
-    color: var(--qwik-light-blue);
+    color: var(--qwik-light-red);
 }
 
 .subMenu {
@@ -60,6 +60,6 @@
 }
 
 .link:hover {
-    color: var(--qwik-light-blue); 
+    color: var(--qwik-light-red); 
     background-color: inherit;
 }
