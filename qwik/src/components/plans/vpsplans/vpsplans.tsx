@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import planstyles from "../planstyles.module.css";
-import plansData from '../../../data/plans.json';
+import plansData from '../../../data/introplans.json';
 
 // Define an interface for the plan object
 interface Plan {
