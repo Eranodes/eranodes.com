@@ -4,7 +4,7 @@
       "website": [
             {
                 "name": "Basic",
-                "type": "Website Hosting",
+                "description": "Website Hosting",
                 "locations": ["US", "EU", "Asia"],
                 "ram": "2 GB",
                 "vCores": 1,
@@ -13,11 +13,12 @@
                 "bandwidth": "Unlimited",
                 "backups": true,
                 "ddos_protection": true,
-                "price": "$9.99/month"
+                "price": "$9.99/month",
+                "link": "https://buymeacoffee.com/g9aerospace"
             },
             {
                 "name": "Advanced",
-                "type": "Website Hosting",
+                "description": "Website Hosting",
                 "locations": ["US", "EU", "Asia"],
                 "ram": "2 GB",
                 "vCores": 1,
@@ -33,7 +34,7 @@
       "ai": [
             {
                 "name": "Starter AI",
-                "type": "AI Hosting",
+                "description": "AI Hosting",
                 "locations": ["US", "Canada"],
                 "ram": "8 GB",
                 "vCores": 2,
@@ -46,7 +47,7 @@
             },
             {
                 "name": "Advanced AI",
-                "type": "AI Hosting",
+                "description": "AI Hosting",
                 "locations": ["US", "Canada"],
                 "ram": "8 GB",
                 "vCores": 2,
@@ -62,7 +63,7 @@
       "game": [
             {
                 "name": "Gamer's Paradise",
-                "type": "Game Server Hosting",
+                "description": "Game Server Hosting",
                 "locations": ["EU", "Australia"],
                 "ram": "32 GB",
                 "vCores": 8,
@@ -75,7 +76,7 @@
             },
             {
                 "name": "Gamer's Hell",
-                "type": "Game Server Hosting",
+                "description": "Game Server Hosting",
                 "locations": ["EU", "Australia"],
                 "ram": "32 GB",
                 "vCores": 8,
@@ -91,7 +92,7 @@
         "vps": [
             {
                 "name": "Small VPS",
-                "type": "Game Server Hosting",
+                "description": "Game Server Hosting",
                 "locations": ["EU", "Australia"],
                 "ram": "32 GB",
                 "vCores": 8,
@@ -104,7 +105,7 @@
             },
             {
                 "name": "Big VPS",
-                "type": "Game Server Hosting",
+                "description": "Game Server Hosting",
                 "locations": ["EU", "Australia"],
                 "ram": "32 GB",
                 "vCores": 8,
@@ -119,7 +120,7 @@
         "vds": [
             {
                 "name": "Small VDS",
-                "type": "Game Server Hosting",
+                "description": "Game Server Hosting",
                 "locations": ["EU", "Australia"],
                 "ram": "32 GB",
                 "vCores": 8,
@@ -132,7 +133,7 @@
             },
             {
                 "name": "Big VDS",
-                "type": "Game Server Hosting",
+                "description": "Game Server Hosting",
                 "locations": ["EU", "Australia"],
                 "ram": "32 GB",
                 "vCores": 8,
@@ -147,7 +148,7 @@
         "bare-metal": [
             {
                 "name": "Small Bare Metal",
-                "type": "Game Server Hosting",
+                "description": "Game Server Hosting",
                 "locations": ["EU", "Australia"],
                 "ram": "32 GB",
                 "vCores": 8,
@@ -160,7 +161,7 @@
             },
             {
                 "name": "Big Bare Metal",
-                "type": "Game Server Hosting",
+                "description": "Game Server Hosting",
                 "locations": ["EU", "Australia"],
                 "ram": "32 GB",
                 "vCores": 8,

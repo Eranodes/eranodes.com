@@ -1,132 +1,87 @@
-.heading {
-    font-size: 24px;
-    font-weight: bold;
-    color: #8a8a8a;
-    margin: 50px auto 0;
-    padding: 0;
-    text-align: center;
-}
-
-.mainheading {
-    font-size: 36px;
-    font-weight: bold;
-    color: #8a8a8a;
-    margin: 50px auto 0;
-    padding: 0;
-    text-align: center;
-}
-
-
-/*btw a var(--plan-color) is available to be used in each card */
-.wrapper {
-    display: grid;
-    margin: 5px 70px;
-    padding: 0 30px;
-    justify-content: center;
-    align-items: center;
+.section {
+    background-color: rgba(71, 71, 71, 0.192);
+    padding: 20px 50px;
+    border-radius: 10px;
 }
 
 .plans {
     display: flex;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-@media screen and (max-width: 768px) {
-    .plans {
-        grid-gap:2px
-    } 
-}
-
-@media screen and (max-width: 768px) {
-    .plans {
-        margin-top: 10px;
-    } 
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 8px;
 }
 
 .card {
-    background-color: #2a2a2a77;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-@media screen and (max-width: 768px) {
-    .card {
-        height: fit-content;
-        border-radius: 2px;
-        background-color: #3e3e3e42;
-    } 
-}
-
-.card:hover {
-    transform: translateY(-3px);
-    cursor: pointer;
-    background-color: #33333377;
+    background-color: rgba(78, 78, 78, 0.704);
+    padding: 15px 25px;
+    max-width: max-content;
+    width:100%;
+    border-radius: 5px;
+    box-shadow: 3px gray;
+    height: max-content;
 }
 
 .name {
-    font-size: 28px;
-    padding: 1px 0 1px 0px;
-    margin: 0;
-    color: white;
+    font-size: 1.3rem;
 }
 
-@media screen and (max-width: 768px) {
-    .name {
-        font-size: 18px;
-        padding: 0;
-    } 
+.description {
+    color: rgba(197, 197, 197, 0.734);
+}
+
+.specsbox {
+    background-color: rgba(142, 142, 142, 0.208);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.location {
+    font-size: small;
+}
+
+.specs {
+    font-size: smaller;
+    text-align: left;
+}
+
+.specs .ram {
+
+}
+
+.specs .vcores {
+
+}
+
+.specs .storage{
+
+}
+
+.specs .processor {
+
+}
+
+.specs .bandwidth {
+
+}
+
+.specs .ddos {
+
 }
 
 .price {
-    background-color: var(--qwik-dark-blue);
-    font-weight: bold;
-    padding: 5px;
-    margin: 3px 0 5px 4px;
-    border-radius: 2px;
+    background-color: var(--qwik-dark-red);
+    transition: background-color 0.4s ease-in 0.1s ease-out;
     width: fit-content;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-@media screen and (max-width: 768px) {
-    .price {
-        margin: 1px 0 1px 4px;
-    } 
-}
-
-.resources {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    padding-bottom: 5px;
-}
-
-@media screen and (max-width: 768px) {
-    .resources {
-        font-size: smaller;
-    } 
-}
-
-.countries {
-    margin-bottom: 5px;
-    color: aquamarine;
-}
-
-li {
-    color: #cccccc;
-    padding: 0px;
-    margin: 1.5px 0;
-}
-
-li:last-child {
-    margin-bottom: 0;
-}
-
-.name {
+    padding: 4px 10px;
+    margin: 5px auto;
+    border-radius: 5px;
+    color: white;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.price:hover {
+    background-color: var(--qwik-light-red);
 }

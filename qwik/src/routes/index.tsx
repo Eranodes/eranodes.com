@@ -3,7 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 
 import Statistics from '../components/statistics/statistics';
 import Hero from "../components/hero/hero";
-import Plans from "../components/plans/plans"
+import Plans from "../components/introplans/plans"
 import Reviews from "../components/reviews/reviews";
 import SecondaryFooter from "../components/secondary footer/secondary-footer";
 export default component$(() => {
