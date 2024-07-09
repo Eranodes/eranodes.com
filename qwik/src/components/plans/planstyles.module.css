@@ -1,7 +1,15 @@
 .section {
-    background-color: rgba(71, 71, 71, 0.192);
+    background-color: rgba(79, 79, 79, 0.275);
     padding: 20px 50px;
     border-radius: 10px;
+    gap: 14px;
+}
+
+.category {
+    background-color: rgba(79, 79, 79, 0.275);
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    border-radius: 8px;
 }
 
 .plans {
@@ -9,6 +17,7 @@
     flex-direction: row;
     gap: 10px;
     border-radius: 8px;
+    margin-top: 15px;
 }
 
 .card {

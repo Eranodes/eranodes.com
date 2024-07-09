@@ -25,8 +25,8 @@ export const HostingPlans = component$(() => {
   return (
     <div class={hostingStyles.section}>
       {Object.entries(hostingPlans.hosting_plans).map(([category, plans]) => (
-        <div key={category}>
-          <h2>{category.charAt(0).toUpperCase() + category.slice(1)} Plans</h2>
+        <div key={category} class={hostingStyles.category}>
+          <h2>{category.charAt(0) + category.slice(1)} Plans</h2>
           <div class={hostingStyles.plans}>
             {plans.map((plan: any) => (
               <HostingCard key={plan.name} plan={plan} />
