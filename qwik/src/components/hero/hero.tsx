@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import {BsDiscord, BsStarFill, BsServer, BsHddNetwork, BsPersonWorkspace} from "@qwikest/icons/bootstrap"
+import {BsDiscord, BsStarFill, BsHddRack, BsHddNetwork, BsPersonWorkspace} from "@qwikest/icons/bootstrap"
 import { Link } from '@builder.io/qwik-city';
 import herostyles from "./hero.module.css";
 import { StringSwitcher } from "../typewriter/typewriter";
@@ -17,13 +17,13 @@ export default component$(() => {
         <div class={herostyles["button-group"]}>
 
           {/*Game Hosting Button*/}
-          <a href="/game-hosting" class={`${herostyles.button} ${herostyles.gameHostingButton} button`}>
+          <a href="/plans/hosting/game/" class={`${herostyles.button} ${herostyles.gameHostingButton} button`}>
             <BsHddNetwork/>  Game Hosting
           </a>
 
-          {/*Server Hosting Button*/}
-          <a href="/server-hosting" class={`${herostyles.button} ${herostyles.serverHostingButton} button`}>
-            <BsServer/>  Server Hosting
+          {/*VPS Hosting Button*/}
+          <a href="/plans/hosting/vps/" class={`${herostyles.button} ${herostyles.serverHostingButton} button`}>
+            <BsHddRack/>  VPS Hosting
           </a>
 
           {/*Discord Button*/}
@@ -41,7 +41,7 @@ export default component$(() => {
           </Link>
 
           {/*Development Services Button*/}
-          <a href="/development-services" class={`${herostyles.button} ${herostyles.developmentServicesButton} button`}>
+          <a href="/plans/dev/" class={`${herostyles.button} ${herostyles.developmentServicesButton} button`}>
             <BsPersonWorkspace/>  Development Services
           </a>
 
