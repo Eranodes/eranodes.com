@@ -1,0 +1,32 @@
+{
+    "menuItems": [
+      {
+        "name": "Hosting",
+        "subOptions": [
+          { "name": "Website", "route": "/plans/hosting/site" },
+          { "name": "AI", "route": "/plans/hosting/ai" },
+          { "name": "Game", "route": "/plans/hosting/game" },
+          { "name": "VPS", "route": "/plans/hosting/vps" },
+          { "name": "VDS", "route": "/plans/hosting/vds" },
+          { "name": "Bare Metal", "route": "/plans/hosting/bare-metal" }
+        ]
+      },
+      {
+        "name": "Development Services",
+        "subOptions": [
+          { "name": "Website", "route": "/plans/dev/website" },
+          { "name": "Pterodactyl", "route": "/plans/dev/pterodactyl" }
+        ]
+      },
+      {
+        "name": "Build a PC",
+        "subOptions": [
+          { "name": "Buy a Premade", "route": "/plans/pc-build/premade" },
+          { "name": "Configure your own", "route": "/plans/pc-build/configure" },
+          { "name": "Browse Parts", "route": "/plans/pc-build/browse-parts" },
+          { "name": "Request a custom build", "route": "/plans/pc-build/custom-build" }
+        ]
+      }
+    ]
+  }
+  
