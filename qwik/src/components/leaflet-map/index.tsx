@@ -13,7 +13,7 @@ import type { MapProps } from "~/models/map";
 export const LeafletMap = component$<MapProps>(({ location }: MapProps) => {
   useStyles$(`
     #map {
-      width: 100%;
+      width: 80%;
       height: 40vh;
     }
   `);

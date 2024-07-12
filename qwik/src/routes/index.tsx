@@ -39,7 +39,8 @@ export default component$(() => {
       <div role="presentation" class="ellipsis"></div>
       <div role="presentation" class="ellipsis ellipsis-red"></div>
       <div  id="reviews" class="container"></div>
-      <div class="container container-center">
+      <div id="map" class="container container-center">
+        <div class="container container-center"></div>
         <LeafletMap location={currentLocation} />
       </div>
       <Reviews />
