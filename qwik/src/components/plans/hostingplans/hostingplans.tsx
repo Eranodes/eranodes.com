@@ -1,6 +1,7 @@
 import { component$ } from '@builder.io/qwik';
 import { BsGeoAltFill, BsMemory, BsCpu, BsNvme, BsPc, BsRouter, BsArchive, BsShieldShaded } from '@qwikest/icons/bootstrap';
 import hostingPlans from '../../../data/plans.json';
+
 import hostingStyles from "../plans.module.css";
 
 const HostingCard = ({ plan }: { plan: any }) => (
