@@ -13,3 +13,22 @@
   text-align: center;
   font-size: medium;
 }
+
+.circleContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.labels {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.label {
+  margin-left: 57px;
+  margin-right: 57px;
+}
