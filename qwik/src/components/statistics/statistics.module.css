@@ -21,14 +21,17 @@
   margin-top: 20px;
 }
 
-.labels {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-left: 15px;
+.column {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  margin: 0 30px;
 }
 
 .label {
-  margin-left: 57px;
-  margin-right: 57px;
+  margin-top: 15px;
+  font-size: 15px;
+  text-wrap: wrap;
+  word-wrap: break-word;
+  color: gainsboro;
 }

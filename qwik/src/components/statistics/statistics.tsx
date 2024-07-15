@@ -49,38 +49,42 @@ export default component$(() => {
     <div class={styles.section}>
       <p class={styles.heading}>Our progress so far..</p>
       <div class={styles.circleContainer}>
-        <CircleDiagram 
-          borderColor="red" 
-          gradientStart="#ffffff" // Red
-          gradientEnd="#101117" // Orange
-          opacity={1} // Adjust opacity here (0.0 to 1.0)
-          gradientAngle='320deg'
-          value={serverStats.value.pterodactylServerCount} 
-          label="Servers Hosted"
-        />
-        <CircleDiagram 
-          borderColor="yellow" 
-          gradientStart="#ffffff" // Yellow
-          gradientEnd="#101117" // Gold
-          opacity={0.6} // Adjust opacity here (0.0 to 1.0)
-          gradientAngle='320deg'
-          value={parseInt(serverStats.value.pterodactylTotalRam)} 
-          label="Total RAM (GB)" 
-        />
-        <CircleDiagram 
-          borderColor="green" 
-          gradientStart="#ffffff" // Green
-          gradientEnd="#101117" // Lime
-          opacity={0.3} // Adjust opacity here (0.0 to 1.0)
-          gradientAngle='320deg'
-          value={serverStats.value.discordMemberCount} 
-          label="Discord Members" 
-        />
-      </div>
-      <div class={styles.labels}>
-        <p class={styles.label}>Servers Hosted</p>
-        <p class={styles.label}>Total RAM (GB)</p>
-        <p class={styles.label}>Discord Members</p>
+        <div class={styles.column}>
+          <CircleDiagram 
+            borderColor="red" 
+            gradientStart="#ffffff"
+            gradientEnd="#101117"
+            opacity={1}
+            gradientAngle='320deg'
+            value={serverStats.value.pterodactylServerCount} 
+            label="Servers Hosted"
+          />
+          <h3 class={styles.label}>Servers Hosted</h3>
+        </div>
+        <div class={styles.column}>
+          <CircleDiagram 
+            borderColor="yellow" 
+            gradientStart="#ffffff"
+            gradientEnd="#101117"
+            opacity={0.6}
+            gradientAngle='320deg'
+            value={parseInt(serverStats.value.pterodactylTotalRam)} 
+            label="Total RAM (GB)" 
+          />
+          <h3 class={styles.label}>Total Ram (GB)</h3>
+        </div>
+        <div class={styles.column}>
+          <CircleDiagram 
+            borderColor="green" 
+            gradientStart="#ffffff"
+            gradientEnd="#101117"
+            opacity={0.3}
+            gradientAngle='320deg'
+            value={serverStats.value.discordMemberCount} 
+            label="Discord Members" 
+          />
+          <h3 class={styles.label}>Discord Members</h3>
+        </div>
       </div>
     </div>
   );

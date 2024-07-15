@@ -1,6 +1,6 @@
 .circle {
-    width: 200px;
-    height: 200px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -16,6 +16,7 @@
   
 .label {
     margin-bottom: 8px;
+    text-wrap: wrap;
 }
 
 @property --num {
