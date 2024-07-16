@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import { component$, $ } from "@builder.io/qwik";
 import styles from "./vps.module.css";
 import costs from "../../../data/resources.json";
