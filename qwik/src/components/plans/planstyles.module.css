@@ -53,30 +53,6 @@
     text-align: left;
 }
 
-.specs .ram {
-
-}
-
-.specs .vcores {
-
-}
-
-.specs .storage{
-
-}
-
-.specs .processor {
-
-}
-
-.specs .bandwidth {
-
-}
-
-.specs .ddos {
-
-}
-
 .price {
     background-color: var(--qwik-dark-red);
     transition: background-color 0.4s ease-in 0.1s ease-out;

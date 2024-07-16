@@ -1,4 +1,3 @@
-// routes/products/[productId]/index.tsx
 import { component$ } from '@builder.io/qwik';
 import { useLocation } from '@builder.io/qwik-city';
 
