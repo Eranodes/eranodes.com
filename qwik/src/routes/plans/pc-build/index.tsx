@@ -1,4 +1,3 @@
-// routes/products/index.tsx
 import { component$ } from '@builder.io/qwik';
 
 export default component$(() => {

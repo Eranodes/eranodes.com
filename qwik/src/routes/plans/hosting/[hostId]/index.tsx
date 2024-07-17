@@ -1,13 +1,12 @@
-// routes/products/[productId]/index.tsx
 import { component$ } from '@builder.io/qwik';
-import { useLocation } from '@builder.io/qwik-city';
+import HostingPlans from "../../../../components/plans/hostingplans/dynamic";
 
 export default component$(() => {
-  const loc = useLocation();
-  return(
+  return (
     <>
-        <div class="container"></div>
-        <h1>Hosting plans for {loc.params.hostId}</h1>
+      <div class="sticky ellipsis ellipsis-red"></div>
+      <HostingPlans/>
+      <div class="ellipsis ellipsis-purple"></div>
     </>
-  ) 
+  );
 });

@@ -1,0 +1,32 @@
+.container {
+    background-color: var(--section-background-color);
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0px 80px 0px;
+  }
+  
+  .input-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom:5px;
+  }
+  
+  input {
+    width: 97.5%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #949494;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  
+  #totalCost,
+  #resources {
+    margin-top: 10px;
+    font-size: 18px;
+  }

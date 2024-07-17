@@ -13,3 +13,25 @@
   text-align: center;
   font-size: medium;
 }
+
+.circleContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  margin: 0 30px;
+}
+
+.label {
+  margin-top: 15px;
+  font-size: 15px;
+  text-wrap: wrap;
+  word-wrap: break-word;
+  color: gainsboro;
+}
