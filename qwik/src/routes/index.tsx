@@ -5,6 +5,7 @@ import Statistics from '../components/statistics/statistics';
 import Hero from "../components/hero/hero";
 import Reviews from "../components/reviews/reviews";
 import SecondaryFooter from "../components/secondary footer/secondary-footer";
+import Space from "../components/space/space";
 
 import leafletStyles from "../../node_modules/leaflet/dist/leaflet.css?inline";
 
@@ -31,6 +32,7 @@ export default component$(() => {
 
   return (
     <>
+      <Space />
       <Hero />
       <Statistics />
       <div id="plans" class="container"></div>
