@@ -2,7 +2,7 @@
 import { component$ } from '@builder.io/qwik';
 import { useLocation } from '@builder.io/qwik-city';
 import plansData from '../../../../data/plans.json';
-import hostingPlanStyles from './hostingplans.module.css';
+import hostingPlanStyles from '../../../../components/plans/plans.module.css';
 
 interface Plan {
   name: string;
@@ -56,12 +56,12 @@ export default component$(() => {
   }
 
   return (
-    <div class={hostingPlanStyles.container}>
+    <div class={hostingPlanStyles.section}>
       <p class={hostingPlanStyles.title}>Hosting plans for {hostId}</p>
       {hostingPlans.length > 0 ? (
-        <ul class={hostingPlanStyles.wrapper}>
+        <ul class={hostingPlanStyles.plans}>
           {hostingPlans.map((plan) => (
-            <li key={plan.name} class={hostingPlanStyles.planItem}>
+            <li key={plan.name} class={hostingPlanStyles.card}>
               <p class={hostingPlanStyles.name}>{plan.name}</p>
               <p class={hostingPlanStyles.description}>{plan.description}</p>
               <p class={hostingPlanStyles.locations}>{plan.locations.join(", ")}</p>
@@ -74,8 +74,7 @@ export default component$(() => {
                 <p class={`${hostingPlanStyles.specs} ${hostingPlanStyles.backups}`}>Backups: {plan.backups ? "Yes" : "No"}</p>
                 <p class={`${hostingPlanStyles.specs} ${hostingPlanStyles.ddos}`}>DDoS Protection: {plan.ddos_protection ? "Yes" : "No"}</p>
               </div>
-              <p class={hostingPlanStyles.price}>Price: {plan.price}</p>
-              {plan.link && <a href={plan.link} target="_blank" rel="noopener noreferrer" class={hostingPlanStyles.purchase}>Purchase</a>}
+              {plan.link && <a href={plan.link} target="_blank" rel="noopener noreferrer" class={hostingPlanStyles.price}>{plan.price}</a>}
             </li>
           ))}
         </ul>

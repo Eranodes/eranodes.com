@@ -6,7 +6,8 @@ export default component$(() => {
   return (
     <>
       <div class="sticky ellipsis ellipsis-red"></div>
-      <h1>Explore our hosting services</h1>
+      <Space/>
+      <h2>Explore our hosting services</h2>
       <Space/>
       <HostingPlans/>
       <div class="ellipsis ellipsis-purple"></div>
