@@ -1,0 +1,84 @@
+.container {
+    background-color: rgba(128, 128, 128, 0.208);
+    margin: 40px auto;
+    padding: 35px 50px;
+    border-radius: 20px;
+}
+
+.title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+}
+
+.wrapper {
+    background-color: rgba(135, 135, 135, 0.142);
+    border-radius: 15px;
+    padding: 20px 25px;
+}
+
+.planItem {
+    border-radius: 10px;
+    background-color: rgba(240, 248, 255, 0.094);
+    border: white 1.5px solid;
+    padding: 10px 15px;
+    margin: 10px;
+}
+
+.name {
+    background-color: rgb(39, 39, 39);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.description {
+    color: rgb(154, 154, 154);
+}
+
+.locations {
+    font-size: 0.6rem;
+}
+
+.specsBox {
+
+}
+
+.specsBox .specs {
+}
+
+.specsBox .ram {
+
+}
+
+.specsBox .vcores {
+
+}
+
+.specsBox .storage {
+
+}
+
+.specsBox .processor {
+
+}
+
+.specsBox .bandwidth {
+
+}
+
+.specsBox .backups {
+
+}
+
+.specsBox .ddos {
+
+}
+
+.price {
+
+}
+
+.purchase {
+
+}
