@@ -9,6 +9,11 @@
     justify-content: center;
 }
 
+.title {
+    font-size: 2rem;
+    color: white;
+}
+
 .category {
     background-color: rgba(48, 48, 48, 0);
     padding: 15px 25px;
