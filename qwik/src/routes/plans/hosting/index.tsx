@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import HostingPlans from "../../../components/plans/hostingplans/hostingplans";
+import HostingPlans from "../../../components/plans/hostingplans/home";
 import Space from "../../../components/space/space";
 
 export default component$(() => {
