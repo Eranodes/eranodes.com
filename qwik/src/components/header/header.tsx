@@ -3,6 +3,7 @@ import Eranodes from '~/media/eranodes.png?jsx';
 import { component$ } from "@builder.io/qwik";
 import headerstyles from "./header.module.css";
 import Navigation from "./nav/nav"
+import Breadcrumb from '../breadcrumb/breadcrumb';
 
 export default component$(() => {
   return (
@@ -15,6 +16,9 @@ export default component$(() => {
           <p class={headerstyles.heading}>EraNodes Inc</p>
         </div>
         <Navigation/>
+      </div>
+      <div class={headerstyles.breadcrumb}>
+        <Breadcrumb />
       </div>
     </header>
   );

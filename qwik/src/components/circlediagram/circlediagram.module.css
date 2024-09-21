@@ -1,0 +1,36 @@
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: 4px solid;
+    background: linear-gradient(var(--gradient-angle), rgba(var(--circle-gradient-start-rgb), var(--gradient-opacity)) 10%, rgba(var(--circle-gradient-end-rgb), var(--gradient-opacity)) 70%);
+  }
+  
+.label {
+    margin-bottom: 8px;
+    text-wrap: wrap;
+}
+
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+.value::before {
+  counter-set: my-counter var(--num);
+  content: counter(my-counter);
+  animation: count 3s ease-in-out 1 normal forwards;
+}
+
+@keyframes count {
+  to { --num: var(--value); }
+}

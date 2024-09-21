@@ -4,7 +4,6 @@ import type { RequestHandler } from "@builder.io/qwik-city";
 import { useServerStats } from '../components/statistics/statistics';
 
 import Header from "../components/header/header";
-import Breadcrumb from "../components/breadcrumb/breadcrumb"
 import Footer from "../components/footer/footer";
 
 import styles from "./styles.css?inline";
@@ -31,7 +30,6 @@ export default component$(() => {
   return (
     <>
       <Header />
-      <Breadcrumb/>
       <main>
         <Slot />
       </main>
